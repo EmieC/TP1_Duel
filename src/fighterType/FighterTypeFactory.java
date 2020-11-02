@@ -10,15 +10,16 @@ public class FighterTypeFactory {
 		WARRIOR, ATHLETE, WIZARD
 	}
 	
-	public Fighter createFighter(FighterTypeFactoryType type, Abilities stats, Fighter fighter2 ){
+	public Fighter createFighter(FighterTypeFactoryType type, Abilities stats){
 		
+		String name = null;
 		Fighter fighter = null;
 		switch(type) {
-		case WARRIOR : fighter = new Warrior(fighter2.getName(), stats, null, null);
+		case WARRIOR : fighter = new Warrior(name, stats, null, null);
 		break;
-		case ATHLETE : fighter = new Athlete(fighter2.getName(), stats, null, null);
+		case ATHLETE : fighter = new Athlete(name, stats, null, null);
 		break;
-		case WIZARD: fighter = new Wizard(fighter2.getName(), stats, null, null);
+		case WIZARD: fighter = new Wizard(name, stats, null, null);
 		break;
 		default:
 			throw new illegalFighterTypeExecption();

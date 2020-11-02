@@ -11,10 +11,13 @@ public class Wizard extends Fighter {
 
 	public Wizard(String name, Abilities stats, Skill skill1, Skill skill2) {
 		super(name, stats, skill1, skill2);
+		this.verifyStats(stats);
+	}
+	
+	private void verifyStats(Abilities stats) {
 		if(stats.getIntelligence()< Math.max(stats.getStenght(), stats.getDexterity())+ABILITIES_ADDITION
 			||stats.getConcetration() < Math.max(stats.getStenght(), stats.getDexterity() + ABILITIES_ADDITION)){
 			throw new illegalAbilitiesExecption();
 		}
 	}
-
 }
