@@ -1,5 +1,8 @@
 package duel;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class  Fighter {
 	
 	private String name;
@@ -10,6 +13,7 @@ public abstract class  Fighter {
 	private Skill skill2;
 	
 	public final int DEFAUTL_HEALTH = 100;
+	private List<Skill> skillList = new ArrayList<Skill>();
 	
 	public Fighter(String name, Abilities stats,Skill axe, Skill potion) {
 		
@@ -59,27 +63,24 @@ public abstract class  Fighter {
 	}
 	
 	public boolean hasTheSkill(Skill skill) {
-		boolean fighterHasSkill = true;
-		if(skill != this.skill1) {
-			fighterHasSkill = false;
-		}
-		else if(skill != this.skill2) {
-			fighterHasSkill = false;
-		}
+		boolean fighterHasSkill = false;
 		
+		if(this.skillList.contains(skill)) {
+			fighterHasSkill = true;
+		}
 		return fighterHasSkill;
 	}
 	
 	public void addSkill(Skill skill) {
-		
+		this.skillList.add(skill);
 	}
 	
 	public void removeSkill(Skill skill) {
-		
+		this.skillList.remove(skill);
 	}
 	
 	public int getPower(Skill skill) {
-		return 0;
+		return skill.getPower(stats);
 	}
 	
 }
