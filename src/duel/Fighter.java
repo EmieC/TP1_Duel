@@ -9,7 +9,7 @@ public abstract class  Fighter {
 	private Abilities stats;
 	private int health;
 	
-	private Skill skill1;
+	private Skill skill1;//MS Inutile, puisqu'on doit stocker les Skills dans un ArrayList.
 	private Skill skill2;
 	
 	public final int DEFAUTL_HEALTH = 100;
@@ -18,12 +18,12 @@ public abstract class  Fighter {
 	public Fighter(String name, Abilities stats,Skill axe, Skill potion) {
 		
 		this.name = name;
-		this.stats = stats;
+		this.stats = stats;//MS: Prendre une copie de l'instance d'objet Abilities (encapsulation)
 		this.skill1 = axe;
 		this.skill2 = potion;
 		
-		this.health = DEFAUTL_HEALTH;
-	}
+		this.health = DEFAUTL_HEALTH;//MS Health est déterminé en fonction des valeurs des attributs.
+	}//MS Il n'y a pas de validation des abilities.
 	
 	public String getName() {
 		return this.name;

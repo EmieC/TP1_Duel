@@ -29,7 +29,7 @@ public class HealingSpell implements Skill, Healing {
 	
 	@Override
 	public int getPower(Abilities stats) {
-		int power = stats.getIntelligence() * this.Spellvalue/100;
+		int power = stats.getIntelligence() * this.Spellvalue/100;//MS: chiffre ou string magique -> constante à définir
 		return power;
 	}
 

@@ -29,7 +29,7 @@ public class DefensiveSpell implements Skill, Defence {
 	
 	@Override
 	public int getPower(Abilities stats) {
-		int power = (stats.getIntelligence() * this.spellItensityValue /100) *3;
+		int power = (stats.getIntelligence() * this.spellItensityValue /100) *3;//MS: chiffre ou string magique -> constante à définir
 		return power;
 	}
 

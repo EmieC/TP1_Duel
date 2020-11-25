@@ -8,7 +8,7 @@ import execption.illegalAbilitiesExecption;
 
 public class Athlete extends Fighter{
 	
-	public final int MIN_ABILITIES = 20;
+	public final int MIN_ABILITIES = 20;//MS On devrait avoir une constante par habiletés.
 
 	public Athlete(String name, Abilities stats, Skill skill1, Skill skill2) {
 		super(name, stats, skill1, skill2);

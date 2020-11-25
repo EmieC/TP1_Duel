@@ -9,7 +9,7 @@ public class SkillTypeFactory {
 		SWORD, SHIELD, REMEDY, OFFENSIVE_SPELL, DEFENSIVE_SPELL, HEALING_SPELL
 	}
 	
-	public Skill chooseSkillType(SkillTypeFactoryType type, int value) {
+	public Skill chooseSkillType(SkillTypeFactoryType type, int value) {//MS dans l'énoncé, on demande une méthode par type de skill à créer (Attack, parade, heal)
 		
 		Skill skill = null;
 		switch(type) {
